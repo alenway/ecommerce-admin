@@ -8,6 +8,10 @@ import Dashboard from "./pages/Dashboard";
 import Enquiries from "./pages/Enquiries";
 import BlogList from "./pages/BlogList";
 import Blogcatlist from "./pages/Blogcatlist";
+import Orders from "./pages/Orders";
+import Customers from "./pages/Customers";
+import Colorlist from "./pages/Colorlist";
+import Categorylist from "./pages/Categorylist";
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
             <Route path="enquiries" element={<Enquiries />} />
             <Route path="blog-list" element={<BlogList />} />
             <Route path="blog-category-list" element={<Blogcatlist />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="customers" element={<Customers />} />
+            <Route path="color-list" element={<Colorlist />} />
+            <Route path="category-list" element={<Categorylist />} />
           </Route>
         </Routes>
       </Router>
