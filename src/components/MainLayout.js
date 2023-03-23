@@ -3,6 +3,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import logo192 from "../images/logo192.png";
 
 import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import {
   AiOutlineDashboard,
@@ -166,13 +167,41 @@ const MainLayout = () => {
                 3
               </span>
             </div>
-            <div className="d-flex gap-3 align-items-center">
+            <div className="d-flex gap-3 align-items-center dropdown">
               <div>
                 <img src={logo192} alt="react" height={32} width={32} />
               </div>
-              <div>
+              <div
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 <h5 className="mb-0">Nrendra</h5>
                 <p className="mb-0">narendrasamtani@gamil.com</p>
+              </div>
+              <div
+                className="dropdown-menu" // fixed typo here
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li className="py-2">
+                  <Link
+                    to="/"
+                    className="dropdown-item py-1 mb-1"
+                    style={{ height: "auto", lineHeight: "20px" }}
+                  >
+                    View Profile
+                  </Link>
+                </li>
+                <li className="py-2">
+                  <Link
+                    to="/"
+                    className="dropdown-item py-1 mb-1"
+                    style={{ height: "auto", lineHeight: "20px" }}
+                  >
+                    Signout
+                  </Link>
+                </li>
               </div>
             </div>
           </div>
